@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskeginer Official Market</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" type="image/png">
+  <meta name="description" content="Taskeginer Official Market - Promo menarik setiap hari, belanja hemat, cepat, dan terpercaya!">
+  <meta name="keywords" content="Taskeginer, market, belanja, top up, jasa desain, joki, followers, canva premium">
+  <meta name="author" content="Taskeginer">
+  <!-- ==== CSS ==== -->
+  <style>
+    :root {
+      --bg-color: #0e0e10;
+      --card-color: #1a1a1d;
+      --text-color: #eaeaea;
+      --accent-color: #00ffe0;
+      --btn-color: #00c853;
+      --btn-hover: #00b248;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    * {margin:0;padding:0;box-sizing:border-box;}
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #0e0e10, #141416);
+      color: var(--text-color);
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    header, footer {
+      background: linear-gradient(145deg, #1a1a1d, #111112);
+      border-radius: 16px;
+      text-align: center;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(var(--accent-color), transparent, var(--accent-color));
+      animation: spin 12s linear infinite;
+      opacity: 0.15;
+    }
+
+    header h1 {font-size:2.4em;margin-bottom:8px;position:relative;z-index:1;animation: glow 3s infinite alternate;}
+    header p {font-size:1.1em;color:#b0bec5;position:relative;z-index:1;}
+
+    .intro {text-align:center;margin:50px 0 25px;}
+    .intro h2 {color:var(--accent-color);font-size:1.9em;margin-bottom:12px;animation: fadeGlow 3s infinite alternate;}
+    .intro p {color:#ccc;font-size:1em;}
+
+    footer {font-size:0.9em;color:#aaa;position:relative;overflow:hidden;}
+    footer::after {
+      content:"";
+      position:absolute;bottom:0;left:0;width:100%;height:3px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      animation: shimmer 4s infinite linear;
+    }
+
+    .service-grid,.product-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+      margin-bottom:50px;
+    }
+
+    .product-card {
+      background: linear-gradient(145deg, #1a1a1d, #0f0f11);
+      border-radius: 15px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity:0;
+      transform:translateY(20px);
+      animation: fadeInUp 0.7s ease forwards;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .product-card::after {
+      content:"";
+      position:absolute;
+      top:0;left:-100%;
+      width:100%;height:100%;
+      background:linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent);
+      transition:0.5s;
+    }
+
+    .product-card:hover::after {left:100%;}
+    .product-card:hover {transform: translateY(-8px) scale(1.05);box-shadow:0 14px 28px rgba(0,255,224,0.2);}
+
+    .product-card img {
+      width:100%;
+      max-width:300px;
+      height:200px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:12px;
+      animation: float 4s ease-in-out infinite;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .product-card h3 {margin:10px 0 6px;font-size:1.35em;}
+    .product-card p {font-size:0.95em;color:#ddd;margin-bottom:10px;}
+
+    button {
+      background: linear-gradient(90deg,var(--btn-color),#00e676);
+      color:#fff;padding:10px 20px;border:none;border-radius:8px;
+      cursor:pointer;font-weight:bold;
+      transition:transform 0.2s,box-shadow 0.3s;
+    }
+    button:hover {transform:scale(1.08);box-shadow:0 0 15px var(--accent-color);}
+
+    @keyframes fadeInUp {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+    @keyframes spin {0%{transform:rotate(0);}100%{transform:rotate(360deg);}}
+    @keyframes glow {from{text-shadow:0 0 10px var(--accent-color);}to{text-shadow:0 0 25px var(--accent-color);}}
+    @keyframes fadeGlow {from{opacity:0.8;}to{opacity:1;color:#fff;text-shadow:0 0 15px var(--accent-color);}}
+    @keyframes shimmer {0%{background-position:-200px 0;}100%{background-position:200px 0;}}
+    @keyframes float {0%{transform:translateY(0);}50%{transform:translateY(-6px);}100%{transform:translateY(0);}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛒 Taskeginer Official Market</h1>
+    <p>Promo Menarik Setiap Hari! Belanja Hemat, Dan Proses Cepat 🚚</p>
+  </header>
+
+  <section class="intro" id="services">
+    <h2>🛠 Pelayanan Kami</h2>
+    <p>Kami juga menyediakan jasa terbaik untuk membantu kebutuhanmu.</p>
+  </section>
+
+  <section class="service-grid"></section>
+
+  <section class="intro" id="products">
+    <h2>✨ Produk Terbaik Kami ✨</h2>
+    <p>Temukan pilihan produk dengan harga bersahabat.</p>
+  </section>
+
+  <main class="product-grid"></main>
+
+  <footer>
+    <p>&copy; 2025 Taskeginer Official Market. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <!-- ==== JS ==== -->
+  <script>
+    const services=[
+      {name:"DESAIN KONTEN",desc:"Kami menyediakan layanan desain feed Instagram, logo, dan banner promosi.",img:"https://raw.githubusercontent.com/taskeginer/img.desain.konten/main/download%20(6).jpg",link:"https://taskeginer.github.io/desain.konten/"},
+      {name:"JOKI AKADEMIK",desc:"Butuh bantuan tugas atau skripsi? Kami siap bantu secara profesional dan rahasia.",img:"https://raw.githubusercontent.com/taskeginer/img.akademik/main/Transformative%20Online%20Course%20Creation.jpg",link:"https://taskeginer.github.io/akademik/"},
+      {name:"JOKI GAME",desc:"Layanan joki aman dan terpercaya untuk berbagai game dan dikerjakan oleh player pro tanpa cheat, naik rank jadi mudah!",img:"https://raw.githubusercontent.com/taskeginer/img.game/main/Elegant%20Gaming%20Setup%20with%20Futuristic%20Blue%20Lighting.jpg",link:"https://taskeginer.github.io/game/"}
+    ];
+    const servicesContainer=document.querySelector(".service-grid");
+    services.forEach(s=>{
+      const card=document.createElement("div");
+      card.className="product-card";
+      card.innerHTML=`<img src="${s.img}" alt="${s.name}"/><h3>${s.name}</h3><p>${s.desc}</p><button onclick="window.location.href='${s.link}'">Masuk</button>`;
+      servicesContainer.appendChild(card)
+    });
+
+    const products=[
+      {name:"JUBEL AKUN GAME",desc:"Jual beli akun game terpercaya! Aman, cepat, dan bergaransi.",img:"https://raw.githubusercontent.com/taskeginer/img.jubel.game/main/download%20(4).jpg",link:"https://taskeginer.github.io/jubel.game/"},
+      {name:"TOP UP GAME",desc:"Top up game cepat & terpercaya! Harga bersahabat, proses instan.",img:"https://raw.githubusercontent.com/taskeginer/img.top.up/main/download%20(1).jpg",link:"https://www.vygaming.id/id-id"},
+      {name:"TOP UP DANA & PULSA",desc:"Top up DANA & pulsa cepat, aman, dan terpercaya!",img:"https://raw.githubusercontent.com/taskeginer/img.dana/main/download%20(3).jpg",link:"https://taskeginer.github.io/dana/"},
+      {name:"TAMBAH FOLLOWERS",desc:"Tambah Followers IG & TikTok cepat, aman, dan terpercaya!",img:"https://raw.githubusercontent.com/taskeginer/img.follow/main/download%20(2).jpg",link:" https://taskeginer.github.io/follow/"},
+      {name:"CANVA PREMIUM",desc:"Canva Premium Tim aman & terpercaya!",img:"https://raw.githubusercontent.com/taskeginer/img.canva/main/Como%20Ganhar%20Dinheiro%20com%20Canva_%209%20Ideias%20Criativas.jpg",link:"https://taskeginer.github.io/canva/"},
+    ];
+    const productContainer=document.querySelector(".product-grid");
+    products.forEach(p=>{
+      const card=document.createElement("div");
+      card.className="product-card";
+      card.innerHTML=`<img src="${p.img}" alt="${p.name}"/><h3>${p.name}</h3><p>${p.desc}</p><p><strong>${p.price||""}</strong></p><button onclick="window.location.href='${p.link}'">Masuk</button>`;
+      setTimeout(()=>{productContainer.appendChild(card)},100)
+    });
+  </script>
+</body>
+</html>
